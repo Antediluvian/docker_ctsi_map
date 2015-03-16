@@ -1,0 +1,9 @@
+rootProject.name = 'docker_ctsi_map'
+
+
+include 'docker-base'
+include 'docker-centos'
+include 'docker-redis'
+include 'docker-nginx'
+include 'docker-postgresql'
+include 'docker-tilestache'
