@@ -35,5 +35,4 @@ VOLUME ["/mnt/redis"]
 #############################################
 # Set the default command to run when starting the container
 #############################################
-COPY supervisord.conf /home/python/supervisord.conf
 CMD /home/python/.ve/bin/supervisord -c /home/python/supervisord.conf
