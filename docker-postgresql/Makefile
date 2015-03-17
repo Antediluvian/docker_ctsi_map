@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
+
+name = ctsi/postgresql
+tag  = 9.4
+
 all: build
 
 build:
-	@docker build --tag=ctsi/postgresql .
-	@docker tag -f ctsi/postgresql:9.4 ctsi/postgresql:latest
+	@docker build --tag=$(name):$(tag) .
+	@docker tag -f $(name):$(tag) $(name):latest

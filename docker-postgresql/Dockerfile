@@ -34,11 +34,6 @@ RUN /usr/pgsql-$PG_MAJOR_VER/bin/initdb -D $PG_DATA_HOME --auth-local=trust -E '
 # Adjust PostgreSQL configuration so that remote connections to the database are possible.
 RUN echo "host    all        all        0.0.0.0/0    md5" >> $PG_DATA_HOME/pg_hba.conf
 
-# And add ``listen_addresses`` to ``$PG_DATA_HOME/postgresql.conf``.
-# RUN echo "listen_addresses='*'" >> $PG_DATA_HOME/postgresql.conf
-# COPY postgresql.conf $PG_DATA_HOME/postgresql.conf
-
-
 # Run the rest of the commands as the ``root`` user
 USER root
 
