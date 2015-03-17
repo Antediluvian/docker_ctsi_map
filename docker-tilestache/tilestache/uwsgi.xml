@@ -7,15 +7,15 @@
     <gid>www-data</gid>
     <uid>uwsgi</uid>
 
-    <pythonpath>/home/uwsgi/.ve/lib/python2.7</pythonpath>
+    <pythonpath>/home/python/.ve/lib/python2.7</pythonpath>
 
     <master/>
     <thunder-lock/>
     <enable-threads/>
     <memory-report/>
-    <processes>4</processes>
+    <processes>8</processes>
     <stats>/tmp/stats.socket</stats>
 
-    <pidfile>/home/uwsgi/var/run/uwsgi.pid</pidfile>
-    <wsgi-file>/mnt/uwsgi/tilestache/tilestache.wsgi</wsgi-file>
+    <pidfile>/home/python/var/run/uwsgi.pid</pidfile>
+    <wsgi-file>/mnt/tilestache/tilestache.wsgi</wsgi-file>
 </uwsgi>

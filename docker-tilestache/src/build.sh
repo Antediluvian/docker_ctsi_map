@@ -1,9 +1,8 @@
 #! /bin/bash
 set -o pipefail
 
-IMAGE=ctsi/uwsgi
-VERSION=2.0.9
+IMAGE=ctsi/tilestache
+VERSION=1.50.1
 
 docker build -t ${IMAGE}:${VERSION} .
 docker tag -f ${IMAGE}:${VERSION} ${IMAGE}:latest
-

@@ -1,11 +1,6 @@
 FROM ctsi/centos
 MAINTAINER Cui Wei <cuiwei@ctsi.com.cn>
 
-#############################################
-# Run the system update and install the necessary software, libs.
-#############################################
-RUN yum -y install gcc-c++ && yum -y clean all
-
 
 #############################################
 # The redis parts.

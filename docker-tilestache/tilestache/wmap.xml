@@ -33,9 +33,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-20037508.3427892,-18032511.5015175,20037508.3427893,18428920.0129501]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -57,9 +57,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8183070.1647,2300043.6981,15037698.0541,7087486.9689]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -81,9 +81,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[12075121.2762,422976.442000002,13882435.5106,5015222.7613]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -106,9 +106,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8828157.70831842,2461105.06129558,13466831.9841149,6329387.10227629]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -130,9 +130,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8180972.9055,420293.3562,15038958.1908,7087914.2934]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -154,9 +154,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[11862275.0702104,178420.541768552,14047625.8426001,5001354.71341193]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -184,9 +184,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8377307.09143621,2056000.10417235,14923451.9739245,6862275.94843593]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -221,9 +221,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8201846.42324276,2061060.58411006,15041102.2041592,7088182.32006334]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -244,9 +244,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[12044899.1476364,379695.515779286,13669250.8933937,2823217.59086301]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -273,9 +273,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8796413.84232381,2286764.75372754,14615249.4921295,7045381.09781297]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -299,9 +299,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8183070.16473066,2300043.69810924,15037698.0541307,7087486.96891171]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -354,9 +354,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -409,9 +409,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -3084,9 +3084,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -4505,9 +4505,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -6068,9 +6068,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -7631,9 +7631,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
     </Datasource>
   </Layer>
 
@@ -9619,9 +9619,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8229568.31603501,1900901.93327834,15001441.2959793,7086973.46031155]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
        <Parameter name="id"><![CDATA[china_roads_d1]]></Parameter>
        <Parameter name="project"><![CDATA[wmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -9919,9 +9919,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8249542.37226805,468346.230858379,14990147.9336384,7072331.8477669]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
        <Parameter name="id"><![CDATA[china_cities]]></Parameter>
        <Parameter name="project"><![CDATA[wmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -9946,9 +9946,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[-19505464.0141582,-5056691.00896929,19950305.8961851,9387963.68174872]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
        <Parameter name="id"><![CDATA[world_cities]]></Parameter>
        <Parameter name="project"><![CDATA[wmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -10823,9 +10823,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8373807.20664567,2063719.62527068,14950155.293376,7061497.23356822]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
        <Parameter name="id"><![CDATA[china_roads_shield]]></Parameter>
        <Parameter name="project"><![CDATA[wmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
@@ -10948,9 +10948,9 @@
        <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
        <Parameter name="extent"><![CDATA[8370266.13364354,2073896.09461836,14814327.7034897,6472583.96347339]]></Parameter>
        <Parameter name="dbname"><![CDATA[ctsi_map_2014_q3]]></Parameter>
-       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="host"><![CDATA[db_01]]></Parameter>
        <Parameter name="user"><![CDATA[ctsi]]></Parameter>
-       <Parameter name="password"><![CDATA[ctsi_pass]]></Parameter>
+       <Parameter name="password"><![CDATA[ctsi123]]></Parameter>
        <Parameter name="id"><![CDATA[china_roads_label]]></Parameter>
        <Parameter name="project"><![CDATA[wmap]]></Parameter>
        <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
