@@ -99,5 +99,4 @@ VOLUME  ["/home/cache"]
 
 
 # Set the default command to run when starting the container
-COPY supervisord.conf $PY_HOME/supervisord.conf
 CMD $PY_HOME/.ve/bin/supervisord -c $PY_HOME/supervisord.conf
