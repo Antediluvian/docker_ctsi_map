@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 name = ctsi/centos
-tag  = 20150317
+tag  = 20150318
 
 all: build
 
