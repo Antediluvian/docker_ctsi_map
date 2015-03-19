@@ -1,3 +1,3 @@
 import TileStache
 
-application = TileStache.WSGITileServer('/mnt/tilestache/tilestache.cfg', autoreload=True)
+application = TileStache.WSGITileServer('/home/tilestache/tilestache.cfg', autoreload=True)

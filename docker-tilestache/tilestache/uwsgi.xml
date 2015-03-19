@@ -3,11 +3,8 @@
         <socket>0.0.0.0:%(_)</socket>
     <endfor/>
 
-    <virtualenv>.ve</virtualenv>
     <gid>www-data</gid>
     <uid>uwsgi</uid>
-
-    <pythonpath>/home/python/.ve/lib/python2.7</pythonpath>
 
     <master/>
     <thunder-lock/>
@@ -16,6 +13,5 @@
     <processes>8</processes>
     <stats>/tmp/stats.socket</stats>
 
-    <pidfile>/home/python/var/run/uwsgi.pid</pidfile>
-    <wsgi-file>/mnt/tilestache/tilestache.wsgi</wsgi-file>
+    <wsgi-file>/home/tilestache/tilestache.wsgi</wsgi-file>
 </uwsgi>
