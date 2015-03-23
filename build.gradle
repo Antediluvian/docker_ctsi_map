@@ -1,3 +1,15 @@
+
+buildscript {
+    repositories {
+        maven { url 'http://repo.sufor.cc/content/repositories/central' }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-docker-plugin:2.0.2'
+    }
+}
+
+
 version = '1.0.0-SNAPSHOT'
 
 
@@ -6,4 +18,8 @@ task wrapper(type: Wrapper) {
 
     gradleVersion = "2.3"
     distributionUrl = "http://config.sufor.cc/gradle-2.3-all.zip"
+}
+
+
+allprojects {
 }

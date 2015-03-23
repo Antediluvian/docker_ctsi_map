@@ -1,0 +1,19 @@
+
+webapp:
+  image: registry
+  volumes_from:
+   - volume
+  environment:
+   - SETTINGS_FLAVOR=local
+   - SEARCH_BACKEND=sqlalchemy
+   - SQLALCHEMY_INDEX_DATABASE:sqlite:////opt/docker-image/docker-registry.db
+   - STORAGE_PATH=/opt/docker-image
+   - GUNICORN_OPTS=[--preload]
+  privileged: true
+
+volume:
+  image: registry
+  command: true
+  volumes:
+   - /opt/docker-image
+  privileged: true

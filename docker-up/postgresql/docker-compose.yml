@@ -1,0 +1,15 @@
+db:
+  image: ctsi/postgresql
+  ports:
+   - "5432:5432"
+  volumes:
+   - postgresql/supervisord.conf:/home/supervisord.conf
+   - postgresql/postgresql.conf:/home/postgresql/data/postgresql.conf
+  volumes_from:
+   - volume
+  privileged: true
+
+volume:
+  image: ctsi/postgresql
+  command: true
+  privileged: true

@@ -1,16 +1,16 @@
-upstream gis {
-    server tomcat_test:8080;
+upstream registry {
+    server registry:5000;
 }
 
 server {
     listen 80;
     server_name localhost;
 
-    access_log /home/nginx/var/logs/tests_gis_access.log;
-    error_log /home/nginx/var/logs/tests_gis_error.log;
+    access_log /home/nginx/var/logs/registry_access.log;
+    error_log /home/nginx/var/logs/registry_error.log;
 
     location / {
-        proxy_pass        http://gis;
+        proxy_pass        http://registry;
 
         proxy_set_header  Host		$host;
         proxy_set_header  X-Real-IP	$remote_addr;
