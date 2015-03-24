@@ -1,15 +1,15 @@
 db:
-  image: ctsi/postgresql
+  image: ctsi/postgis
   ports:
    - "5432:5432"
-  volumes:
-   - postgresql/supervisord.conf:/home/supervisord.conf
-   - postgresql/postgresql.conf:/home/postgresql/data/postgresql.conf
   volumes_from:
    - volume
   privileged: true
 
 volume:
-  image: ctsi/postgresql
+  image: ctsi/postgis
   command: true
+  volumes:
+   - /var/lib/postgresql/data
+  entrypoint: true
   privileged: true

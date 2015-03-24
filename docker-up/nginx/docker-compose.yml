@@ -1,19 +1,14 @@
-web:
-  image: ctsi/nginx
-  links:
-   - geoserver:webapp
+
+httpd:
+  image: nginx
   ports:
    - "80:80"
    - "443:443"
   external_links:
-   - geoserver_webapp_1:geoserver
    - registry_webapp_1:registry
   volumes:
-   - nginx/supervisord.conf:/home/supervisord.conf
-   - nginx/etc/sites-enabled:/home/nginx/etc/sites-enabled
-   - nginx/etc/cert:/home/nginx/etc/cert
-   - nginx/etc/nginx.conf:/home/nginx/etc/nginx.conf
-   - nginx/etc/conf.d:/home/nginx/etc/conf.d
-  environment:
-   - TZ=Asia/Shanghai
+   - etc/cert:/etc/nginx/cert
+   - etc/sites-enabled:/etc/nginx/sites-enabled
+   - etc/conf.d:/etc/nginx/conf.d
+   - etc/nginx.conf:/etc/nginx/nginx.conf
   privileged: true

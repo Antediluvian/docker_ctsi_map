@@ -1,16 +1,24 @@
 rootProject.name = 'docker_ctsi_map'
 
 
-include 'docker-base'
-include 'docker-centos'
-include 'docker-redis'
-include 'docker-nginx'
+include 'docker-base:debian'
+include 'docker-base:debian-buildpack'
+
+include 'docker-base:centos'
+include 'docker-base:centos-buildpack'
+
+
+include 'docker-java'
+include 'docker-tomcat'
+
+
 include 'docker-postgresql'
 include 'docker-tilestache'
 include 'docker-php-fpm'
-include 'docker-javaweb'
+
 
 include 'docker-up:geoserver'
 include 'docker-up:registry'
 include 'docker-up:nginx'
+include 'docker-up:redis'
 include 'docker-up:postgresql'

@@ -1,0 +1,19 @@
+upstream geoserver {
+    server geoserver:8080;
+}
+
+server {
+    listen 80;
+    server_name localhost;
+
+    access_log /var/logs/access_geoserver.log;
+    error_log /var/logs/error_geoserver.log;
+
+    location / {
+        proxy_pass        http://geoserver;
+
+        proxy_set_header  Host              $host;
+        proxy_set_header  X-Real-IP         $remote_addr;
+        proxy_set_header  X-Forwarded-For	$proxy_add_x_forwarded_for;
+    }
+}

@@ -1,53 +1,63 @@
-FROM ctsi/centos
-MAINTAINER Cui Wei <cuiwei@ctsi.com.cn>
+FROM postgres:9.4.1
+MAINTAINER Cui Wei <cuiwei1@ctsi.com.cn>
+
+RUN rm /etc/apt/sources.list &&\
+ echo deb http://mirrors.163.com/debian wheezy main >> /etc/apt/sources.list &&\
+ echo deb http://mirrors.163.com/debian wheezy-updates main >> /etc/apt/sources.list &&\
+ echo deb http://mirrors.163.com/debian wheezy-backports main >> /etc/apt/sources.list
 
 
-# Install the necessary software and libs.
-RUN yum -y install http://yum.postgresql.org/9.4/redhat/rhel-7-x86_64/pgdg-centos94-9.4-1.noarch.rpm &&\
- yum -y install postgresql94-server postgis2_94 &&\
- yum -y clean all
+# add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
+RUN groupadd -r postgres && useradd -r -g postgres postgres
 
+# grab gosu for easy step-down from root
+RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/* \
+	&& curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture)" \
+	&& curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture).asc" \
+	&& gpg --verify /usr/local/bin/gosu.asc \
+	&& rm /usr/local/bin/gosu.asc \
+	&& chmod +x /usr/local/bin/gosu \
+	&& apt-get purge -y --auto-remove curl
 
-# The PostgreSQL environment variables.
-ENV PG_MAJOR_VER 9.4
-ENV PG_HOME /home/postgresql
-ENV PG_DATA_HOME $PG_HOME/data
-ENV PG_LOGS_HOME $PG_HOME/logs
-ENV PG_DB_NAME map_2014_q3
-ENV PG_DB_USER ctsi
-ENV PG_DB_PASS ctsi_123
+# make the "en_US.UTF-8" locale so postgres will be utf-8 enabled by default
+RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
+	&& localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
+ENV LANG en_US.utf8
 
+RUN mkdir /docker-entrypoint-initdb.d
 
-# Create the PostgreSQL home folder and set the privilege properly.
-RUN mkdir -p $PG_LOGS_HOME &&\
- mkdir -p $PG_DATA_HOME &&\
- chown postgres:postgres $PG_HOME -R
+RUN apt-key adv --keyserver pool.sks-keyservers.net --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 
+ENV PG_MAJOR 9.4
+ENV PG_VERSION 9.4.1-1.pgdg70+1
 
-# Run the rest of the commands as the ``postgres`` user
-USER postgres
-RUN /usr/pgsql-$PG_MAJOR_VER/bin/initdb -D $PG_DATA_HOME --auth-local=trust -E 'UTF-8' --lc-collate='en_US.UTF-8' --lc-ctype='en_US.UTF-8' &&\
- /usr/pgsql-$PG_MAJOR_VER/bin/pg_ctl start -w -D $PG_DATA_HOME -l $PG_LOGS_HOME/postgresql.log &&\
- psql -c "CREATE USER $PG_DB_USER WITH SUPERUSER PASSWORD '$PG_DB_PASS';" &&\
- createdb -O $PG_DB_USER $PG_DB_NAME &&\
- psql -c "CREATE EXTENSION postgis;" -d $PG_DB_NAME &&\
- /usr/pgsql-$PG_MAJOR_VER/bin/pg_ctl stop -w -D $PG_DATA_HOME
+ENV POSTGIS_MAJOR 2.1
+ENV POSTGIS_VERSION 2.1.5+dfsg-1~exp2~90.git884bcd4.pgdg70+1
 
-# Adjust PostgreSQL configuration so that remote connections to the database are possible.
-RUN echo "host    all        all        0.0.0.0/0    md5" >> $PG_DATA_HOME/pg_hba.conf
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
 
+RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
 
-# Run the rest of the commands as the ``root`` user
-USER root
+RUN apt-get update \
+	&& apt-get install -y postgresql-common \
+	&& sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf \
+	&& apt-get install -y \
+		postgresql-$PG_MAJOR=$PG_VERSION \
+		postgresql-contrib-$PG_MAJOR=$PG_VERSION \
+	&&  apt-get install -y --no-install-recommends \
+        postgresql-$PG_MAJOR-postgis-$POSTGIS_MAJOR=$POSTGIS_VERSION \
+        postgis=$POSTGIS_VERSION \
+	&& rm -rf /var/lib/apt/lists/*
 
+ENV PATH /usr/lib/postgresql/$PG_MAJOR/bin:$PATH
+ENV PGDATA /var/lib/postgresql/data
+VOLUME /var/lib/postgresql/data
 
-# Expose the PostgreSQL port
+COPY docker-entrypoint.sh /
+COPY initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
 EXPOSE 5432
-
-
-# Add VOLUMEs to allow backup of config, logs and databases
-VOLUME  ["/home/postgresql"]
-
-
-# Set the default command to run when starting the container
-CMD ["supervisord", "-c", "/home/supervisord.conf"]
+CMD ["postgres"]

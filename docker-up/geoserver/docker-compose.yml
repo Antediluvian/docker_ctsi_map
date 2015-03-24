@@ -1,11 +1,11 @@
 
-webapp:
+app:
   image: ctsi/tomcat
   external_links:
    - postgresql_db_1:postgresql
   volumes:
-   - tomcat/supervisord.conf:/home/supervisord.conf
-   - tomcat/webapps:/home/tomcat/webapps
+   - supervisord.conf:/home/supervisord.conf
+   - webapps:/home/tomcat/webapps
   environment:
    - TZ=Asia/Shanghai
    - JAVA_OPTS=-Xmx1024m

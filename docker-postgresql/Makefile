@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-name = ctsi/postgresql
-tag  = 9.4
+name = ctsi/postgis
+tag  = 2.1
 
 all: build
 
