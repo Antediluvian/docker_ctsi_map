@@ -1,0 +1,17 @@
+
+app:
+  image: hub.sufor.cc/rabbitmq:3m
+  ports:
+   - "5672:5672"
+   - "15672:15672"
+  volumes_from:
+   - volume
+  privileged: true
+
+
+volume:
+  image: hub.sufor.cc/rabbitmq:3m
+  command: true
+  volumes:
+   - /var/lib/rabbitmq
+  privileged: true

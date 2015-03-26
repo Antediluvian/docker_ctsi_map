@@ -3,12 +3,16 @@ webapp:
   image: registry
   volumes_from:
    - volume
+  external_links:
+   - redis_app_1:redis
   environment:
    - SETTINGS_FLAVOR=local
    - SEARCH_BACKEND=sqlalchemy
    - SQLALCHEMY_INDEX_DATABASE:sqlite:////opt/docker-image/docker-registry.db
    - STORAGE_PATH=/opt/docker-image
    - GUNICORN_OPTS=[--preload]
+   - CACHE_REDIS_HOST=redis
+   - CACHE_REDIS_PORT=6379
   privileged: true
 
 volume:

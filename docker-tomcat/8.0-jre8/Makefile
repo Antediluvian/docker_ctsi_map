@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-name = ctsi/tomcat
-tag  = 8.0
+name = hub.sufor.cc/ctsi/tomcat
+tag  = 8.0-jre8
 
 all: build
 

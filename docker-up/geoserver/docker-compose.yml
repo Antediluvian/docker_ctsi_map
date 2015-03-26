@@ -1,10 +1,9 @@
 
 app:
-  image: ctsi/tomcat
+  image: ctsi/tomcat:8.0-jre8
   external_links:
    - postgresql_db_1:postgresql
   volumes:
-   - supervisord.conf:/home/supervisord.conf
    - webapps:/home/tomcat/webapps
   environment:
    - TZ=Asia/Shanghai

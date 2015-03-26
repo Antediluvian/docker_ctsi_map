@@ -6,6 +6,7 @@ httpd:
    - "443:443"
   external_links:
    - registry_webapp_1:registry
+   - rabbitmq_app_1:rabbitmq
   volumes:
    - etc/cert:/etc/nginx/cert
    - etc/sites-enabled:/etc/nginx/sites-enabled

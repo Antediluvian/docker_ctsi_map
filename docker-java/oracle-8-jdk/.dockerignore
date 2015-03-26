@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-8.0-jdk8/Makefile
+Makefile
+
 *.conf
 *.sh
 *.iml

@@ -1,10 +1,5 @@
-FROM postgres:9.4.1
+FROM ctsi/debian-buildpack:curl
 MAINTAINER Cui Wei <cuiwei1@ctsi.com.cn>
-
-RUN rm /etc/apt/sources.list &&\
- echo deb http://mirrors.163.com/debian wheezy main >> /etc/apt/sources.list &&\
- echo deb http://mirrors.163.com/debian wheezy-updates main >> /etc/apt/sources.list &&\
- echo deb http://mirrors.163.com/debian wheezy-backports main >> /etc/apt/sources.list
 
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
@@ -25,8 +20,6 @@ RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* 
 	&& localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
-RUN mkdir /docker-entrypoint-initdb.d
-
 RUN apt-key adv --keyserver pool.sks-keyservers.net --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 
 ENV PG_MAJOR 9.4
@@ -36,8 +29,6 @@ ENV POSTGIS_MAJOR 2.1
 ENV POSTGIS_VERSION 2.1.5+dfsg-1~exp2~90.git884bcd4.pgdg70+1
 
 RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
-
-RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql
 
 RUN apt-get update \
 	&& apt-get install -y postgresql-common \
@@ -56,6 +47,10 @@ VOLUME /var/lib/postgresql/data
 
 COPY docker-entrypoint.sh /
 COPY initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
+
+RUN mkdir -p /var/run/postgresql && chown -R postgres /var/run/postgresql\
+ && chmod a+x /docker-entrypoint.sh\
+ && chmod a+x /docker-entrypoint-initdb.d/*.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
